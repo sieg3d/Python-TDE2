@@ -106,7 +106,44 @@ else:
     aumento = salario_base * 0.15
     print(f'O salário do colaborador é R${salario_base:.2f} e seu aumento será de R${aumento:.2f} totalizando R${(salario_base + aumento):.2f}.')
 '''
+'''
 # 9. Crie um código em python que peça os 3 lados de um triângulo. O script deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
 lado_1 = float(input('Insira um lado do triangulo: '))
 lado_2 = float(input('Insira o segundo lado do triangulo: '))
 lado_3 = float(input('Insira o terceiro lado do triangulo: '))
+
+if lado_1 == 0 and lado_2 == 0 and lado_3 == 0: 
+    print('Não é um triangulo')
+elif ((lado_1 == lado_2) and lado_1 != lado_3) or ((lado_1 == lado_3) and lado_1 != lado_2) or ((lado_2 == lado_3) and lado_3 != lado_1):
+    print('Possui dois lados iguais e um diferente. Logo é um triangulo isóceles.')
+elif lado_1 != lado_2 and lado_1 != lado_3 and lado_2 != lado_3:
+    print('Possui tres lados diferentes. Logo é um triangulo escaleno.')
+else:
+    print('Os lados são iguais, portanto é um triangulo equilátero.')
+'''
+
+'''
+#10. Escreva um programa usando while que leia a capacidade de um elevador e o peso de 5 pessoas. Informar se o elevador está liberado para subir ou se excedeu a carga máxima.
+peso_atual = 0
+qtd_pessoas = 0
+peso_max = float(input('Qual o peso máximo suportado? '))
+while qtd_pessoas < 5 and peso_atual <= peso_max:
+    peso_pessoa = float(input(f'Qual o peso da pessoa {qtd_pessoas+1}? '))
+    qtd_pessoas +=1
+    peso_atual += peso_pessoa
+    if qtd_pessoas == 5 and peso_atual <= peso_max:
+        print(f'Atingiu a quantidade máxima de pessoas. O peso atual é: {peso_atual:.2f}.\nLiberado para subir/descer!')
+    elif peso_atual == peso_max:
+        print(f'Atingiu a o peso máximo suportado. O peso atual é: {peso_atual:.2f}Kg com o total de {qtd_pessoas} pessoas.\nLiberado para subir/descer!')
+    elif peso_atual > peso_max:
+        print(f'A capacidade máxima é {peso_max}Kg e no momento está com {peso_atual}Kg.\nElevador não liberado para subir/descer.')
+'''
+
+#11. Desafio: Faça um script que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c.
+# O script deverá pedir os valores de a, b e c e fazer os testes necessários.
+
+import math 
+
+a = float(input('Digite o valor de a: '))
+b = float(input('Digite o valor de b: '))
+c = float(input('Digite o valor de c: '))
