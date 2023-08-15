@@ -93,7 +93,7 @@ maior = max(n_1, n_2, n_3)
 print(f'O maior número digitado foi {maior} e o menor número digitado foi {menor}.')
 '''
 
-
+'''
 #8. Escreva um programa que pergunte o salário de um funcionário e calcule o valor do seu aumento. Para salários superiores a R$1.250,00, calcule um aumento de
 #10%. Para os inferiores ou iguais, o número é de 15%.
 
@@ -101,7 +101,12 @@ salario_base = float(input('Insira o salário bruto do colaborador: '))
 aumento = 0
 if salario_base > 1250:
     aumento = salario_base * 0.1
-    print(f'O salário do colaborador é R${salario_base:.2f} e seu aumento será de R${aumento} totalizando R${salario_base + aumento}.')
+    print(f'O salário do colaborador é R${salario_base:.2f} e seu aumento será de R${aumento:.2f} totalizando R${(salario_base + aumento):.2f}.')
 else:
     aumento = salario_base * 0.15
-    print(f'O salário do colaborador é R${salario_base:.2f} e seu aumento será de R${aumento} totalizando R${salario_base + aumento}.')
+    print(f'O salário do colaborador é R${salario_base:.2f} e seu aumento será de R${aumento:.2f} totalizando R${(salario_base + aumento):.2f}.')
+'''
+# 9. Crie um código em python que peça os 3 lados de um triângulo. O script deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+lado_1 = float(input('Insira um lado do triangulo: '))
+lado_2 = float(input('Insira o segundo lado do triangulo: '))
+lado_3 = float(input('Insira o terceiro lado do triangulo: '))
