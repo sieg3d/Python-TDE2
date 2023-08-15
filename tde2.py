@@ -1,6 +1,10 @@
-#1.Faça um Programa que leia três números inteiros e mostre o maior deles.
+def separador():
+    print('\n',('~~'*100), '\n')
+
 
 '''
+separador()
+#1.Faça um Programa que leia três números inteiros e mostre o maior deles.
 numero_1 = int(input('Digite o primeiro número:'))
 numero_2 = int(input('Digite o segundo número:'))
 numero_3 = int(input('Digite o terceiro número:'))
@@ -15,6 +19,7 @@ elif numero_3 > numero_1 and (numero_3 > numero_2):
 
 
 '''
+separador()
 #2. Crie um código em python que peça 2 números inteiros e um número real. Calcule e mostre:
 #a) o produto do dobro do primeiro com metade do segundo
 #b) a soma do triplo do primeiro com o terceiro
@@ -31,6 +36,7 @@ print(f'O terceiro elevado ao cubo é: {num_real**3}')
 
 
 '''
+separador()
 #3. Faça um Programa que peça a temperatura em graus Fahrenheit, transforme e mostre a temperatura em graus Celsius.
 #● C = 5 * ((F-32) / 9)
 
@@ -38,7 +44,10 @@ fahrenheit = float(input('Digite a temperatura em Fahrenheit: '))
 celsius = 5*((fahrenheit-32)/9)
 print(f'A conversão de {fahrenheit}° Fahrenheit é {celsius:.1f}° Celsius')
 '''
+
+
 '''
+separador()
 #4. Faça um programa que sorteia um número de 0 a 9999 e mostre na tela cada um dos dígitos separadamente.exemplo: unidade: 4 dezena: 3 centena: 8 milhar
 
 import random
@@ -55,7 +64,9 @@ print(f'Centena: {centena}')
 print(f'Milhar: {milhar}')
 '''
 
+
 '''
+separador()
 #5. Escreva um programa que leia a velocidade de um carro. Se ele ultrapassar 80Km/h, mostre uma mensagem dizendo que foi multado. A multa vai custar R$7,00 por cada KM acima do limite.
 
 velocidade = int(input('Insira a velocidade: '))
@@ -70,7 +81,9 @@ else:
     print('Você está dentro do limite de velocidade.')
 '''
 
+
 '''
+separador()
 #6. Faça um programa que leia um ano qualquer e mostre se ele é Bissexto.
 
 ano = int(input('Digite o ano: '))
@@ -80,7 +93,9 @@ if (ano % 4 == 0) and ((ano % 100 != 0) or (ano % 400 == 0)):
 else: print('Não é bissexto')
 '''
 
+
 '''
+separador()
 #7. Faça um programa que leia 3 números e mostre qual é o maior e qual é o menor.
 
 n_1 = float(input('Digite o primeiro número:'))
@@ -93,7 +108,9 @@ maior = max(n_1, n_2, n_3)
 print(f'O maior número digitado foi {maior} e o menor número digitado foi {menor}.')
 '''
 
+
 '''
+separador()
 #8. Escreva um programa que pergunte o salário de um funcionário e calcule o valor do seu aumento. Para salários superiores a R$1.250,00, calcule um aumento de
 #10%. Para os inferiores ou iguais, o número é de 15%.
 
@@ -106,7 +123,10 @@ else:
     aumento = salario_base * 0.15
     print(f'O salário do colaborador é R${salario_base:.2f} e seu aumento será de R${aumento:.2f} totalizando R${(salario_base + aumento):.2f}.')
 '''
+
+
 '''
+separador()
 # 9. Crie um código em python que peça os 3 lados de um triângulo. O script deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
 lado_1 = float(input('Insira um lado do triangulo: '))
 lado_2 = float(input('Insira o segundo lado do triangulo: '))
@@ -122,7 +142,9 @@ else:
     print('Os lados são iguais, portanto é um triangulo equilátero.')
 '''
 
+
 '''
+separador()
 #10. Escreva um programa usando while que leia a capacidade de um elevador e o peso de 5 pessoas. Informar se o elevador está liberado para subir ou se excedeu a carga máxima.
 peso_atual = 0
 qtd_pessoas = 0
@@ -139,6 +161,9 @@ while qtd_pessoas < 5 and peso_atual <= peso_max:
         print(f'A capacidade máxima é {peso_max}Kg e no momento está com {peso_atual}Kg.\nElevador não liberado para subir/descer.')
 '''
 
+
+'''
+separador()
 #11. Desafio: Faça um script que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c.
 # O script deverá pedir os valores de a, b e c e fazer os testes necessários.
 
@@ -147,3 +172,16 @@ import math
 a = float(input('Digite o valor de a: '))
 b = float(input('Digite o valor de b: '))
 c = float(input('Digite o valor de c: '))
+
+delta = b ** 2 - 4 * a * c
+print(f'O valor de Δ é: {delta}')
+if delta < 0:
+    print('Não possui raizes reais.')
+elif delta == 0:
+    x = -b / (2 * a)
+    print(f'Possui apenas uma raiz real que é {x:.2f}.')
+else:
+    x = (-b + math.sqrt(delta)) / 2 * a
+    y = (-b - math.sqrt(delta)) / 2 * a
+    print(f'As raizes da equação são {x:.2f} e {y:.2f}.')
+'''
