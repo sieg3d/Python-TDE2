@@ -70,15 +70,15 @@ else:
     print('Você está dentro do limite de velocidade.')
 '''
 
-
+'''
 #6. Faça um programa que leia um ano qualquer e mostre se ele é Bissexto.
 
-ano = int(input('Digite o ano'))
+ano = int(input('Digite o ano: '))
 
-if ano %4 ==0:
+if (ano % 4 == 0) and ((ano % 100 != 0) or (ano % 400 == 0)):
     print('É ano bissexto!')
 else: print('Não é bissexto')
-
+'''
 
 '''
 #7. Faça um programa que leia 3 números e mostre qual é o maior e qual é o menor.
@@ -86,27 +86,13 @@ else: print('Não é bissexto')
 n_1 = float(input('Digite o primeiro número:'))
 n_2 = float(input('Digite o segundo número:'))
 n_3 = float(input('Digite o terceiro número:'))
-menor = 0
-maior = 0
 
-if n_1 > n_2 and n_1 > n_3:
-    maior = n_1
-elif n_1 < n_2 and n_1 < n_3:
-    menor = n_1
-elif n_2 > n_1 and n_2 > n_3:
-    maior = n_2
-elif n_2 < n_1 and n_2 < n_3:
-    menor = n_2
-elif n_3 > n_1 and n_3 > n_2:
-    maior = n_3
-elif n_3 < n_1 and n_3 < n_2:
-    menor = n_3
-else:
-    ('Têm números repetidos. refaça')
+menor = min(n_1, n_2, n_3)
+maior = max(n_1, n_2, n_3)
 
 print(f'O maior número digitado foi {maior} e o menor número digitado foi {menor}.')
-
 '''
+
 
 #8. Escreva um programa que pergunte o salário de um funcionário e calcule o valor do seu aumento. Para salários superiores a R$1.250,00, calcule um aumento de
 #10%. Para os inferiores ou iguais, o número é de 15%.
